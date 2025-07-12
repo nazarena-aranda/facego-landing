@@ -3,49 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FaceGo – Nuestro equipo</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f6f6; }
-    .section { padding: 40px; text-align: center; }
-    .person { margin: 30px auto; background: white; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .person h2 { margin-bottom: 5px; }
-    .person a { display: block; margin: 10px 0; color: #0077cc; text-decoration: none; }
-  </style>
+  <title>FaceGo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Logo FaceGo" class="logo" />
+    <p class="tagline">Control de accesos con reconocimiento facial</p>
+  </header>
 
-  <div class="section">
-    <h1>FaceGo – Nuestro equipo</h1>
-    <p>Escaneaste un QR, conocé más sobre cada uno de nosotros 👇</p>
-  </div>
+  <section class="about">
+    <h2>Qué es FaceGo?</h2>
+    <p>
+      FaceGo es un sistema de control de acceso con reconocimiento facial en tiempo real.
+      Permite registrar usuarios y abrir puertas usando inteligencia artificial, sin contacto físico y con total seguridad.
+    </p>
+  </section>
 
-  <div class="section person" id="naza">
-    <h2>Nazarena Aranda</h2>
-    <p>Project Manager & Full Stack Developer</p>
-    <a href="https://linkedin.com/in/tu-linkedin" target="_blank">🔗 LinkedIn</a>
-    <a href="https://facego.github.io" target="_blank">🌐 Ver landing del proyecto</a>
-  </div>
+  <section id="equipo">
+    <h2>Equipo</h2>
+    <div class="miembros">
+      <div class="card">
+        <img src="naza.jpeg" alt="Naza" />
+        <h3>Nazarena Aranda</h3>
+        <p>Project Manager & Fullstack Dev</p>
+        <a href="https://www.linkedin.com/in/nazarena-aranda" target="_blank">LinkedIn</a>
+      </div>
+      <div class="card">
+        <img src="fede.jpeg" alt="Fede" />
+        <h3>Federico Angeriz</h3>
+        <p>UX/UI & Fullstack Dev</p>
+        <a href="https://www.linkedin.com/in/federico-angeriz-37015210a/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="card">
+        <img src="santi.jpg" alt="Santi" />
+        <h3>Santiago Fernández</h3>
+        <p>Backend Dev</p>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+      <div class="card">
+        <img src="aylin.jpeg" alt="Aylin" />
+        <h3>Aylin Pintos</h3>
+        <p>Frontend Dev</p>
+        <a href="https://www.linkedin.com/in/aylin-pintos-10b412362/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+  <section class="tech">
+    <h2>Tecnologías</h2>
+    <div class="tech-icons">
+      <img src="react-native.png" alt="React Native" />
+      <img src="dotnet.png" alt=".NET" />
+      <img src="mongodb.png" alt="MongoDB" />
+      <img src="onnx.png" alt="ONNX" />
+      <img src="expo.png" alt="expo" />
+      <img src="expo.png" alt="expo" />
 
-  <div class="section person" id="aylu">
-    <h2>Aylin Pintos</h2>
-    <p>Frontend Developer</p>
-    <a href="https://linkedin.com/in/aylin-linkedin" target="_blank">🔗 LinkedIn</a>
-    <a href="https://facego.github.io" target="_blank">🌐 Ver landing del proyecto</a>
-  </div>
 
-  <div class="section person" id="santi">
-    <h2>Santiago Fernández</h2>
-    <p>Backend Developer</p>
-    <a href="https://linkedin.com/in/santi-linkedin" target="_blank">🔗 LinkedIn</a>
-    <a href="https://facego.github.io" target="_blank">🌐 Ver landing del proyecto</a>
-  </div>
+    </div>
+  </section>
 
-  <div class="section person" id="fede">
-    <h2>Federico Angeriz</h2>
-    <p>Frontend Developer</p>
-    <a href="https://linkedin.com/in/fede-linkedin" target="_blank">🔗 LinkedIn</a>
-    <a href="https://facego.github.io" target="_blank">🌐 Ver landing del proyecto</a>
-  </div>
 
+  <section id="demo" class="demo">
+    <h2>Demo</h2>
+    <p>Te mostramos cómo registrarte y acceder con tu rostro en tiempo real.</p>
+    <video src="demo-facego.mp4" controls></video>
+  </section>
+
+
+  <footer>
+    <p>Gracias por leer ❤️</p>
+  </footer>
 </body>
 </html>
