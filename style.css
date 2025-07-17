@@ -1,8 +1,8 @@
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #e8f2f8;
   color: #333;
 }
 
@@ -11,10 +11,12 @@ header {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  border-radius: 35px;
+  margin: 1rem;
 }
 
 header p {
-    color: black
+    color: rgb(5, 24, 167)
 }
 
 
@@ -26,6 +28,7 @@ header p {
 .tagline {
   font-style: italic;
   margin-top: 0.5rem;
+  margin-bottom: 5rem;
 }
 
 section {
@@ -39,14 +42,17 @@ section {
   justify-content: center;
   gap: 2rem;
   margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(213, 236, 255);
   border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  max-width: 200px;
+  box-shadow: 0 2px 6px rgb(207, 7, 7, 0.15);
+  padding: 2rem;
+  max-width: 150px;
+  min-width: 150px;
+  min-height: 300px;
   text-align: center;
 }
 
@@ -62,6 +68,15 @@ section {
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  padding-top: 70px;
+  margin-top: 70px;
+}
+
+.card a:hover {
+  color: #0056a3;
+  text-decoration: underline;
 }
 
 .btn-demo {
@@ -81,32 +96,38 @@ footer {
 }
 
 .tech {
-  padding: 40px 20px;
+  background-color: #bfdef5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
   text-align: center;
-  background-color: #f8f9fa;
 }
 
 .tech h2 {
   font-size: 2rem;
-  margin-bottom: 30px;
-  color: #222;
+  color: #280e7f;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  margin-top: -0.5rem;
 }
 
 .tech-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 
 .tech-icons img {
   width: 100px;
-  height: 100px;
+  height: 80px;
   object-fit: contain;
-  background-color: white;
+  background-color: #e7effb;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -114,3 +135,27 @@ footer {
   transform: scale(1.1);
 }
 
+.about {
+  background-color: #bfdef5;
+  border-radius: 65px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
