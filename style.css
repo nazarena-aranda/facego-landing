@@ -340,6 +340,15 @@ footer {
     display: block; /* Asegura que el link ocupe toda la línea */
     text-align: center; /* Centra el link horizontalmente */
   }
-
-  
 }
+
+  .willinn-logo {
+    height: 50px;       /* Altura deseada */
+    width: auto;        /* Calcula el ancho automáticamente */
+    margin-left: 1rem;  /* Espaciado */
+    margin-top: 70px;
+    max-width: 100%;       /* No supera el ancho del contenedor */
+    object-fit: contain;   /* Asegura que no se deforme */
+    margin-left: 1rem;
+    display: inline-block; /* Asegura que respete el flujo */
+  }
