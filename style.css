@@ -21,8 +21,40 @@ header p {
 
 
 .logo {
-  width: 280px;
-  margin-bottom: 1rem;
+  width: 350px; /* Aumenta el tamaño de la imagen */
+  margin-bottom: 1rem; /* Mantiene el espacio debajo de la imagen */
+}
+
+/* Links arriba a la derecha */
+.top-links {
+  position: absolute; /* Mantiene los links en la parte superior derecha */
+  top: 1rem; /* Alinea los links en la parte superior */
+  right: 1rem; /* Alinea los links a la derecha */
+  display: flex; /* Alinea los links horizontalmente */
+  gap: 0.5rem; /* Reduce el espacio entre los links */
+}
+
+.top-links .menu-item {
+  background-color: transparent; /* Elimina el color de fondo en el estado normal */
+  color: #0077cc; /* Cambia el color del texto */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Mantiene el tamaño de los boxes */
+  border-radius: 0.75rem; /* Bordes redondeados */
+  box-shadow: none; /* Elimina la sombra en el estado normal */
+  font-size: 0.8rem; /* Ajusta el tamaño del texto */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Activa flexbox */
+  justify-content: center; /* Centra horizontalmente el texto */
+  align-items: center; /* Centra verticalmente el texto */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.top-links .menu-item:hover {
+  background-color: #0077cc; /* Aplica el color de fondo al pasar el cursor */
+  color: white; /* Cambia el color del texto al pasar el cursor */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Añade sombra al pasar el cursor */
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
 }
 
 .tagline {
@@ -31,37 +63,138 @@ header p {
   margin-bottom: 5rem;
 }
 
-section {
+/* Hero section */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Diseño en columna para pantallas pequeñas */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #bfdef5;
+  text-align: center;
   padding: 2rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.hero-content {
+  max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+}
+
+.hero-title {
+  font-size: 2rem; /* Ajusta el tamaño del texto */
+  color: #333;
+  margin-bottom: 1rem;
+  margin-top: -1rem; /* Mueve el texto un poco más arriba */
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  margin-bottom: 1rem;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Cambia a diseño en fila para pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 2rem 5rem; /* Añade más espacio alrededor */
+  }
+
+  .hero-content {
+    max-width: 50%; /* Limita el ancho del texto */
+    margin-right: 2rem; /* Añade espacio entre el texto y la imagen */
+  }
+
+  .logo {
+    width: 300px; /* Ajusta el tamaño de la imagen para pantallas grandes */
+    margin-bottom: 0; /* Elimina el margen inferior */
+  }
+
+  .demo-link {
+    text-align: left; /* Alinea el link a la izquierda en pantallas grandes */
+  }
+}
+
+/* About section */
+.about {
+  background-color: #bfdef5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+  margin: 2rem auto;
   text-align: center;
 }
 
-#equipo .miembros {
+.about h2 {
+  font-size: 1.8rem; /* Ajusta el tamaño del texto */
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Equipo section */
+#equipo {
+  text-align: center; /* Centra el texto de la sección */
+  margin: 2rem auto; /* Centra la sección horizontalmente */
+}
+
+#equipo h2 {
+  font-size: 2rem; /* Ajusta el tamaño del título */
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.miembros {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  justify-content: center; /* Centra los boxes */
+  gap: 1rem; /* Espacio uniforme entre los boxes */
 }
 
 .card {
   background-color: rgb(213, 236, 255);
   border-radius: 1rem;
-  box-shadow: 0 2px 6px rgb(207, 7, 7, 0.15);
-  padding: 2rem;
-  max-width: 150px;
-  min-width: 150px;
-  min-height: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 200px; /* Asegura que todos los boxes tengan el mismo ancho */
+  height: 300px; /* Asegura que todos los boxes tengan el mismo alto */
   text-align: center;
 }
 
 .card img {
-  width: 100%;
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px;
   border-radius: 50%;
-  height: 160px;
   object-fit: cover;
   margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .card a {
@@ -70,8 +203,6 @@ section {
   font-weight: bold;
   font-size: 0.9rem;
   transition: color 0.3s ease;
-  padding-top: 70px;
-  margin-top: 70px;
 }
 
 .card a:hover {
@@ -79,53 +210,30 @@ section {
   text-decoration: underline;
 }
 
-.btn-demo {
-  background-color: #0077cc;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 1.5rem;
-  font-weight: bold;
+/* Tecnologías section */
+#tech {
+  text-align: center; /* Centra el texto horizontalmente */
 }
 
-footer {
-  background-color: #eee;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.tech {
-  background-color: #bfdef5;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.tech h2 {
-  font-size: 2rem;
-  color: #280e7f;
-  font-weight: bold;
-  margin-bottom: 3rem;
-  margin-top: -0.5rem;
+#tech h2 {
+  font-size: 2rem; /* Ajusta el tamaño del título */
+  color: #333;
+  margin-bottom: 1rem; /* Añade espacio debajo del título */
 }
 
 .tech-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px; /* Reduce el espacio entre íconos */
 }
 
 .tech-icons img {
-  width: 100px;
+  width: 80px; /* Ajusta el tamaño de los íconos */
   height: 80px;
   object-fit: contain;
   background-color: #e7effb;
-  padding: 10px;
+  padding: 5px; /* Reduce el padding en pantallas pequeñas */
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -135,27 +243,101 @@ footer {
   transform: scale(1.1);
 }
 
-.about {
-  background-color: #bfdef5;
-  border-radius: 65px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
+/* Footer */
+footer {
+  background-color: #eee;
+  padding: 1rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
-.about h2 {
-  font-size: 2rem;
+/* Demo section */
+.demo {
+  text-align: center; /* Centra el texto y el contenido */
+  margin: 2rem auto; /* Centra la sección horizontalmente */
+}
+
+.demo h2 {
+  font-size: 2rem; /* Ajusta el tamaño del título */
   color: #333;
-  font-weight: bold;
   margin-bottom: 1rem;
-  margin-top: -1rem;
 }
 
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.6;
+.demo p {
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.demo video {
+  max-width: 100%; /* Ajusta el tamaño del video para que sea responsive */
+  border: 1px solid #ddd; /* Añade un borde al video */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Link de Demo */
+.demo-link {
+  display: inline-block; /* Asegura que el link no se superponga a otros elementos */
+  margin-top: 1rem; /* Añade espacio debajo del texto */
+  text-align: center; /* Centra el link horizontalmente */
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el box */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.demo-link:hover {
+  background-color: #0056a3;
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Extras section */
+#extras {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin: 2rem auto; /* Añade espacio alrededor de la sección */
+  padding: 2rem; /* Añade espacio interno */
+  background-color: #f0f8ff; /* Color de fondo para diferenciar la sección */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el box */
+}
+
+#extras h2 {
+  font-size: 2rem; /* Ajusta el tamaño del título */
+  color: #333;
+  margin-bottom: 1rem; /* Añade espacio debajo del título */
+}
+
+#extras p {
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  color: #555;
+  margin-top: 0.5rem; /* Añade espacio encima del texto */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    text-align: center;
+    padding: 1rem; /* Reduce el padding para evitar que los elementos se salgan */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+    margin-bottom: 1rem; /* Añade espacio debajo del texto */
+  }
+
+  .logo {
+    width: 250px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    margin-bottom: 1rem; /* Mantiene el espacio debajo de la imagen */
+  }
+
+  .demo-link {
+    margin-top: 1rem; /* Añade espacio debajo de la imagen */
+    display: block; /* Asegura que el link ocupe toda la línea */
+    text-align: center; /* Centra el link horizontalmente */
+  }
 }

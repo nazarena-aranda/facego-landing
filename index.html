@@ -8,9 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> <!-- Carga la fuente Poppins -->
 </head>
 <body>
-  <header>
+  <!-- Box grande que ocupa toda la pantalla -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Accede con tu rostro: Seguro, rápido e inteligente</h1>
+      <p class="tagline">Control de accesos con reconocimiento facial</p>
+    </div>
     <img src="logo.png" alt="Logo FaceGo" class="logo" />
-    <p class="tagline">Control de accesos con reconocimiento facial</p>
+    <a href="#demo" class="demo-link">Demo</a> <!-- Mueve el link debajo de la imagen -->
+    
+    <!-- Links arriba a la derecha -->
+    <nav class="top-links">
+      <a href="#equipo" class="menu-item">Nosotros</a>
+      <a href="#tech" class="menu-item">Tecnologías</a>
+      <a href="#extras" class="menu-item">Extras</a>
+    </nav>
   </header>
 
   <section class="about">
@@ -50,7 +62,8 @@
       </div>
     </div>
   </section>
-  <section class="tech">
+
+  <section id="tech">
     <h2>Tecnologías</h2>
     <div class="tech-icons">
       <img src="react-native.png" alt="React Native" />
@@ -58,19 +71,20 @@
       <img src="mongodb.png" alt="MongoDB" />
       <img src="onnx.png" alt="ONNX" />
       <img src="expo.png" alt="expo" />
-      <img src="expo.png" alt="expo" />
-
-
     </div>
   </section>
 
+  <!-- Nueva sección Extras -->
+  <section id="extras">
+    <h2>Extras</h2>
+    <p>Texto para extras</p> <!-- Texto debajo del título -->
+  </section>
 
   <section id="demo" class="demo">
     <h2>Demo</h2>
     <p>Te mostramos cómo registrarte y acceder con tu rostro en tiempo real.</p>
     <video src="demo-facego.mp4" controls></video>
   </section>
-
 
   <footer>
     <p>Gracias por leer ❤️</p>
